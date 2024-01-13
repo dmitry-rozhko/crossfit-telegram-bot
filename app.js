@@ -59,7 +59,7 @@ async function parsePage(url) {
     .replace(/<\/?h3>/g, "")
     .replace(/<\/?ul>/g, "")
     .replace(/<\/?li>/g, "");
-  //   bot.sendMessage(forwardChatId, format, { parse_mode: "HTML" });
+  bot.sendMessage(forwardChatId, format, { parse_mode: "HTML" });
   console.log(format);
 }
 
