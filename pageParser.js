@@ -13,6 +13,7 @@ async function parsePage(url) {
   const message = `${entryContent}`;
 
   const format = message
+    .replace(/<strong>/g, "#wod <strong>")
     .replace(/<\/?p>/g, "")
     .replace(/<\/?br>/g, "\n")
     .replace(/<\/?span>/g, "")
@@ -23,7 +24,6 @@ async function parsePage(url) {
     .replace(/<\/?li>/g, "");
 
   bot.sendMessage(forwardChatId, format, { parse_mode: "HTML" });
-  console.log(format);
 }
 
 module.exports = parsePage;
