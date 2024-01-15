@@ -26,6 +26,6 @@ function runAtSpecificTimeOfDay(hour, minutes, func) {
    }
    
 
-runAtSpecificTimeOfDay(11, 55, () => {
+// runAtSpecificTimeOfDay(11, 55, () => {
   parsePage(url);
-});
+// });
